@@ -1,0 +1,119 @@
+Custom Coffee Shop Ordering System
+
+Objective
+Design and implement a modular and extensible coffee shop ordering system in C++ using appropriate creational and structural design patterns. The system should allow dynamic customization of beverages (e.g., coffee, tea) with various add-ons (e.g., milk, sugar, whipped cream), and support different methods of order creation.
+
+Concept Overview
+Your goal is to simulate a coffee shop system where customers can:
+Choose a base beverage (e.g., Espresso, Latte, Green Tea).
+
+
+Add various decorations (milk, sugar, whipped cream, caramel, etc.).
+
+
+Order beverages via different order sources (e.g., online kiosk, cashier, or mobile app).
+
+
+Optionally reuse predefined beverage presets (e.g., "Sweet Latte", "Caramel Green Tea") using an appropriate creational pattern.
+
+
+The implementation should:
+Demonstrate understanding of Decorator for dynamic add-ons.
+
+
+Use at least one creational design pattern (like Factory, Builder, or Prototype) for constructing base beverages or full orders.
+
+
+Be extendable and loosely coupled.
+
+
+
+Requirements
+1. Base Beverage System (Abstract Component)
+Create an abstract class Beverage with a method like std::string getDescription() and double cost().
+
+
+Implement at least 3 concrete beverages (e.g., Espresso, Latte, GreenTea).
+
+
+2. Add-ons (Decorators)
+Implement a BeverageDecorator class derived from Beverage.
+
+
+Add-ons like Milk, Sugar, WhippedCream, Caramel should be decorators that modify description and cost.
+
+
+Students should design the decorators in a chainable way.
+
+
+3. Order Source (Structural Pattern or Factory)
+Simulate different order sources (e.g., CashierOrder, MobileOrder, KioskOrder).
+
+
+Design an OrderFactory that creates order objects depending on the input source.
+
+
+4. Preset Beverages (Creational Pattern)
+Implement a way to easily create predefined drink configurations (e.g., "Sweet Latte" = Latte + Milk + Sugar).
+
+
+This could be done using:
+
+
+Builder pattern to assemble step-by-step,
+
+
+Prototype pattern for cloning predefined drinks,
+
+
+Or Abstract Factory for product families.
+
+
+5. Client Code
+The main function should:
+
+
+Show how different order types are created.
+
+
+Customize drinks with decorators.
+
+
+Display total price and description.
+
+
+
+Guidelines
+Students should use Git and GitHub to submit the assignment.
+
+
+Use proper file separation (e.g., headers and source files).
+
+
+Include a README.md with:
+
+
+Short description
+
+
+Design decisions
+
+
+Pattern(s) used and justification
+
+
+Provide UML class diagram or at least a design sketch explaining class relationships.
+
+
+
+Stretch Goals (Optional but Encouraged)
+Add support for discounts using the Strategy pattern.
+
+
+Allow saving/loading preset drinks using the Prototype pattern or serialization.
+
+
+Add an Order class that contains a list of beverages.
+
+
+
