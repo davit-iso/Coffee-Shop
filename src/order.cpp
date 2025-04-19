@@ -12,6 +12,7 @@ void Order::ad_beverage(int n)
             int d{};
             std::cout<<"What would you like to add?\n";
             this -> display_decorators();
+            std::cin>>d;
             if(d == 1)
             {
                 es = std::make_unique<Milk>(std::move(es));
@@ -51,6 +52,7 @@ void Order::ad_beverage(int n)
             int d{};
             std::cout<<"What would you like to add?\n";
             this -> display_decorators();
+            std::cin>>d;
             if(d == 1)
             {
                 es = std::make_unique<Milk>(std::move(es));
@@ -90,6 +92,7 @@ void Order::ad_beverage(int n)
             int d{};
             std::cout<<"What would you like to add?\n";
             this -> display_decorators();
+            std::cin>>d;
             if(d == 1)
             {
                 es = std::make_unique<Milk>(std::move(es));
@@ -155,10 +158,11 @@ void Order::display_beverage_types() const
 
 void Order::display_beverages() const
 {
-    for(int i = 0; i < beverages.size(); ++i)
+    for(auto i = 0; i < beverages.size(); ++i)
     {
         beverages[i] -> display_name();
     }
+    std::cout<<"Beverages count - "<<beverages.size()<<std::endl;
 }
 
 std::string Order::get_name()
@@ -169,7 +173,7 @@ std::string Order::get_name()
 double Order::get_sum()
 {
     double sum = 0;
-    for(int i = 0; i < beverages.size(); ++i) 
+    for(auto i = 0; i < beverages.size(); ++i) 
     {
         sum += beverages[i] -> cost();
     }

@@ -105,7 +105,7 @@ void Manager::display_orders() const
 {
     for(int i = 0; i < orders.size(); ++i)
     {
-        std::cout<<"Order - "<<i+1<<"\nClient name - "<<orders[i] -> get_name()<<"Sum of beverages - "<<orders[i] -> get_sum()<<std::endl;
+        std::cout<<"Order - "<<i+1<<"\nClient name - "<<orders[i] -> get_name()<<"\nSum of beverages - "<<orders[i] -> get_sum()<<std::endl;
         orders[i] -> display_beverages();
     }
 }
