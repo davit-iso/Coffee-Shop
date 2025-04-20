@@ -35,7 +35,7 @@ void Order::ad_beverage(int n)
             }
             else if(d == 5)
             {
-                return;
+                break;
             }
             else
             {
@@ -75,7 +75,7 @@ void Order::ad_beverage(int n)
             }
             else if(d == 5)
             {
-                return;
+                break;
             }
             else
             {
@@ -115,7 +115,7 @@ void Order::ad_beverage(int n)
             }
             else if(d == 5)
             {
-                return;
+                break;
             }
             else
             {
